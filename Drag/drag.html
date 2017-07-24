@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 5em;
+            height: 5em;
+            cursor: move;
+        }
+
+        #target1 {
+            background: yellow;
+        }
+
+        #target2 {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="target1"></div>
+    <div id="target2"></div>
+    <script>
+        // function getTransform() {
+        //     let transformer = ['transform', 'webkitTransform', 'MozTransform', 'msTransform', 'OTransform'],
+        //         transform = '',
+        //         divStyle = document.createElement('div').style,
+
+        //         i = 0,
+        //         len = transformer.length;
+        //     for (; i < len; i++) {
+        //         if (transformer[i] in divStyle) {
+        //             return transform = transformer[i]
+        //         }
+        //     }
+        //     return transform;
+        // }
+
+        // let transform = getTransform();
+
+        // function getStyle(elem, property) {
+        //     return window.getComputedStyle(elem)[property];
+        // }
+
+        // function getTargetPos(elem) {
+        //     let pos = {
+        //         x: 0,
+        //         y: 0
+        //     };
+        //     // transform = getTransform();
+        //     let transformValue = getStyle(elem, transform);
+        //     if (transformValue === "none") {
+        //         elem.style[transform] = 'tranlate(0, 0)';
+        //         return pos;
+        //     } else {
+        //         let temp = transformValue.match(/-?\d+/g);
+        //         return pos = {
+        //             x: parseInt(temp[4]),
+        //             y: parseInt(temp[5])
+        //         }
+        //     }
+        // }
+
+        // function setTargetPos(elem, pos) {
+        //     // let transform = getTransform();
+        //     elem.style.transform = `translate(${pos.x}px, ${pos.y}px)`
+        // }
+
+        // let elem = document.querySelector("#target1");
+        // let mouseX = 0,
+        //     mouseY = 0;
+
+        // let sourceX = 0,
+        //     sourceY = 0;
+
+        // elem.addEventListener('mousedown', start);
+
+        // function start(event) {
+
+        //     startX = event.clientX;
+        //     startY = event.clientY;
+
+        //     let pos = getTargetPos(elem);
+
+        //     sourceX = pos.x;
+        //     sourceY = pos.y;
+
+        //     elem.addEventListener('mousemove', move);
+        //     elem.addEventListener('mouseup', end);
+        // }
+
+        // function move(event) {
+        //     let currentX = event.clientX,
+        //         currentY = event.clientY;
+        //     let distanceX = currentX - startX,
+        //         distanceY = currentY - startY;
+        //     setTargetPos(elem, {
+        //         x: (sourceX + distanceX),
+        //         y: (sourceY + distanceY)
+        //     })
+        // }
+
+        // function end(event) {
+        //     elem.removeEventListener('mousemove', move);
+        //     elem.removeEventListener('mouseup', end);
+        // }
+
+        
+    </script>
+
+    <script src="test.js"></script>
+    <script>
+        new Drag("#target1");
+        new Drag("#target2");
+    </script>
+</body>
+
+</html>
